@@ -1,0 +1,15 @@
+//CPP ommand prompt
+{
+  "cmd": ["g++.exe","-std=c++17", "${file}", "-o", "${file_base_name}.exe", "&&", "${file_base_name}.exe", "&&", "start", "cmd", "/k" , "$file_base_name"],
+  "selector": "source.c",
+  "working_dir": "${file_path}",
+  "shell": true
+}
+
+//Competitve C++
+{
+"cmd": ["g++.exe","-std=c++17", "${file}", "-o", "${file_base_name}.exe", "&&" , "${file_base_name}.exe<inputf.in>outputf.in"],
+"shell":true,
+"working_dir":"$file_path",
+"selector":"source.cpp"
+}

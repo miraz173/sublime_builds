@@ -1,0 +1,34 @@
+/*--------------source file cannot have space in their name, otherwise will have trouble executing.----------*/
+
+//C ommand prompt; uses std 11 version; takes input from and prints output on command prompt
+{
+  "cmd": ["gcc", "-std=c11",  "$file_name", "-o", "${file_base_name}.exe", "&&", "start", "cmd", "/k" , "$file_base_name"],
+  "selector": "source.c",
+  "working_dir": "${file_path}",
+  "shell": true
+}
+
+//More defaulte version
+{
+  "cmd": ["gcc", "-Wall", "-ansi", "-pedantic-errors", "$file_name", "-o", "${file_base_name}.exe", "&&", "start", "cmd", "/k" , "$file_base_name"],
+  "selector": "source.c",
+  "working_dir": "${file_path}",
+  "shell": true
+}
+
+//C competitve; takes input from inputForC.in and prints output on outputForC.in; uses c11.
+{
+"cmd": ["gcc.exe","-std=c11", "${file}", "-o", "${file_base_name}.exe", "&&" , "${file_base_name}.exe<InputForC.in>OutputForC.in"],
+"shell":true,
+"working_dir":"$file_path",
+"selector":"source.c"
+}
+
+//made by modifiying "Competetive C++" build. takes input from inputf.in and prints output on outputf.in; uses c90.
+{
+"cmd": ["gcc", "-Wall", "-ansi", "-pedantic-errors", "${file}", "-o", "${file_base_name}.exe", "&&" , "${file_base_name}.exe<inputf.in>outputf.in"],
+"shell":true,
+"working_dir":"$file_path",
+"selector":"source.c"
+}
+//Note: All files have to be on the same location. Don't use space in program name, or won't run. Open the tab OutputForC.in and InputForC.in for input and output.

@@ -6,6 +6,7 @@
   "shell": true
 }
 
+/*-------------------source file cannot have space in their name, otherwise will have trouble executing. Input, output, source have to on same directory-----------*/
 //Competitve C++
 {
 "cmd": ["g++.exe","-std=c++17", "${file}", "-o", "${file_base_name}.exe", "&&" , "${file_base_name}.exe<inputf.in>outputf.in"],
